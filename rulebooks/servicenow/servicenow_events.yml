@@ -9,7 +9,7 @@
   rules:
 
     - name: Run the windows daily demo workflow
-      condition: event.payload.short_description  == "Ames AAP Windows AWS Daily Demo"
+      condition: event.payload.short_description  == vars.my_windows_catalog_short_description
       action:
         run_workflow_template:
           name: "Run workflow for the Windows Daily Demo"
